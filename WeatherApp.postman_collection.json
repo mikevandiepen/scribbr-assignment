@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "9e9d0c14-5e91-4748-ad3a-a443d1d7910f",
+		"name": "WeatherApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get weather for today in celcius",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"date\": \"now\",\n    \"temperatureScale\": \"Celcius\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://host.docker.internal/api/weather-predictions",
+					"protocol": "http",
+					"host": [
+						"host",
+						"docker",
+						"internal"
+					],
+					"path": [
+						"api",
+						"weather-predictions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get weather for today in fahrenheit",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"date\": \"now\",\n    \"temperatureScale\": \"Fahrenheit\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://host.docker.internal/api/weather-predictions",
+					"protocol": "http",
+					"host": [
+						"host",
+						"docker",
+						"internal"
+					],
+					"path": [
+						"api",
+						"weather-predictions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Attempt to get the weather of the past",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"date\": \"1970-01-01\",\n    \"temperatureScale\": \"Celcius\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://host.docker.internal/api/weather-predictions",
+					"protocol": "http",
+					"host": [
+						"host",
+						"docker",
+						"internal"
+					],
+					"path": [
+						"api",
+						"weather-predictions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Attempt to get the weather too far into the future",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"date\": \"1970-01-01\",\n    \"temperatureScale\": \"Celcius\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://host.docker.internal/api/weather-predictions",
+					"protocol": "http",
+					"host": [
+						"host",
+						"docker",
+						"internal"
+					],
+					"path": [
+						"api",
+						"weather-predictions"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
